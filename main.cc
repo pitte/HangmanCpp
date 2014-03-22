@@ -47,7 +47,9 @@ int main()
 	bool foundLetter = false;
 
 	fillWords(words); //Fetch the words.
-	whichWord = rand() % ( words.size() ); //A random number between 0 and size().
+	srand(time(NULL));
+	whichWord = rand() % words.size(); //A random number between 0 and size().
+	cout << whichWord << endl;
 
 	//The word to fill with letters the player guessed right.
 	string playersWord(words.at(whichWord).size(), '_');
